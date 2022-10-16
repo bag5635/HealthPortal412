@@ -1,0 +1,8 @@
+.body {
+    padding: 0;
+    margin: 0;
+}
+.container h1{
+    justify-content: center;
+    margin-left: 6em;
+}
