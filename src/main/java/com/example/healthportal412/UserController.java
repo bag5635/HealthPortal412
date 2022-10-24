@@ -31,6 +31,11 @@ public class UserController {
         return "TryAgain";
     }
 
+    @RequestMapping("/Home.html")
+    public String Home() {
+        return "Home";
+    }
+
 
 
 
