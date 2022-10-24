@@ -10,31 +10,20 @@
 
 </head>
 <body>
+
 <div class="container">
-    <h1>User Sign - In</h1>
-  <form th:action="@{/process_Signin}"
-        method="post" style="max-width: 600px; margin: 0 auto;">
-    <div class="m-3">
-      <div class="form-group row">
-        <label class="col-4 col-form-label">E-mail: </label>
-        <div class="col-8">
-          <input type="email" class="form-control" required />
-        </div>
-      </div>
+    <h1>User Login</h1>
+    <form method="post">
+        <label><h6>Email</h6></label>
+        <input type="text" name="userId" placeholder="John@gmail.com">
 
-      <div class="form-group row">
-        <label class="col-4 col-form-label">Password: </label>
-        <div class="col-8">
-          <input type="password" class="form-control"/>
-        </div>
-      </div>
+        <label><h6>Password</h6></label>
+        <input type="password" name="password" placeholder="123AppleSauce">
 
+        <br>
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
 
-      <div>
-        <button type="submit" class="btn btn-primary">Sign In </button>
-      </div>
-    </div>
-  </form>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -6,3 +6,39 @@
     justify-content: center;
     margin-left: 6em;
 }
+
+.container_Home{
+    margin: auto;
+    width: 50%;
+    padding: 2em;
+    text-align: center;
+    background-color: white;
+
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #237cdc;
+    overflow: hidden;
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+    margin: auto;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
