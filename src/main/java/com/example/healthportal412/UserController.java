@@ -36,6 +36,11 @@ public class UserController {
         return "Home";
     }
 
+    @RequestMapping("/UserProfile.html")
+    public String UP() {
+        return "UserProfile";
+    }
+
 
 
 

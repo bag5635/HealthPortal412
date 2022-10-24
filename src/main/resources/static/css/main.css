@@ -15,6 +15,12 @@
     background-color: white;
 
 }
+.image{
+    padding: 1em;
+}
+.editbutton{
+    padding-top: 3em;
+}
 
 
 /* Add a black background color to the top navigation */
@@ -24,7 +30,8 @@
     font-size: 20px;
     font-family: cursive;
     text-align: center;
-    margin: auto;
+
+
 }
 
 /* Style the links inside the navigation bar */
@@ -35,6 +42,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    margin-left: 8em;
 }
 
 /* Change the color of links on hover */

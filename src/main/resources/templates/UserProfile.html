@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <title>UserProfile</title>
+    <script type="text/javascript">
+        function saveEdits() {
+
+//get the editable element
+            var editElem = document.getElementById("First");
+            var Last = document.getElementById("Lname");
+            var Ins = document.getElementById("In");
+            var Pharm = document.getElementById("Phar");
+            var Addr = document.getElementById("Add");
+
+
+//get the edited element content
+            var userVersion = editElem.innerHTML;
+            var LastVersion = Last.innerHTML;
+            var InsVersion = Ins.innerHTML;
+            var PharmVersion = Pharm.innerHTML;
+            var AddrVersion = Addr.innerHTML;
+
+//save the content to local storage
+            localStorage.userEdits = userVersion;
+            localStorage.LastEdit = LastVersion;
+            localStorage.InsEdit = InsVersion;
+            localStorage.PharmEdit = PharmVersion;
+            localStorage.AddrEdits = AddrVersion;
+
+
+//write a confirmation to the user
+            document.getElementById("update").innerHTML="Edits saved!";
+
+        }
+        function checkEdits(){
+            if(localStorage.userEdits!=null)
+                document.getElementById("First").innerHTML=localStorage.userEdits;
+                document.getElementById("Lname").innerHTML=localStorage.LastEdit;
+                document.getElementById("In").innerHTML=localStorage.InsEdit;
+                document.getElementById("Phar").innerHTML=localStorage.PharmEdit;
+                document.getElementById("Add").innerHTML=localStorage.AddrEdits;
+
+        }
+    </script>
+<body onload="checkEdits()">
+
+          <div class="topnav">
+            <a href="Home.html">Home</a>
+            <a href="">User Profile</a>
+            <a href="">Appointments</a>
+            <a href="">Medications</a>
+            <a href="">Medication Records</a>
+          </div>
+
+            <div class="container_Home">
+            <h2> User Profile </h2>
+                <div class="image">
+                    <img src="Images\icon-user-default.png" height="250" width="250">
+                </div>
+
+            
+
+                <div class="container">
+                    <h4>First Name</h4>
+                </div>
+                <div id="First" contenteditable="true">
+                    Adam
+                </div>
+                <br>
+                <div class="container">
+                    <h4>Last Name</h4>
+                </div>
+                <div id="Lname" contenteditable="true">
+                    Jackson
+                </div>
+                <br>
+                <div class="container">
+                    <h4>Insurance</h4>
+                </div>
+                <div id="In" contenteditable="true">
+                    Delta #56463
+                </div>
+                <br>
+                <div class="container">
+                    <h4>Pharmacy</h4>
+                </div>
+                <div id="Phar" contenteditable="true">
+                    CVS
+                </div>
+                <br>
+                <div class="container">
+                    <h4>Address</h4>
+                </div>
+                <div id="Add" contenteditable="true">
+                    123 Easy street, Harrisburg PA, 17111
+                </div>
+                <div class="editbutton">
+                    <input type="button" value="Save Edits" onclick="saveEdits()"/>
+                <div id="update"></div>
+                </div>
+
+            </div>
+
+
+
+
+</body>
+
+<style type="text/css">
+  body { background: #4b99b4 !important; }
+</style>
+
+
+</html>
